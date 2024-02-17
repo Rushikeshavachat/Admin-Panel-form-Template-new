@@ -31,7 +31,7 @@ const FormPage: React.FC = () => {
 
   //   fetchData();
   // }, []);
-router.push("/login")
+// router.push("/login")
   const handleDelete = async (id: string) => {
     // try {
     //   await firestore.collection('data').doc(id).delete();

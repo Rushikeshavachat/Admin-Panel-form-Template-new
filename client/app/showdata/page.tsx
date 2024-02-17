@@ -27,7 +27,7 @@ const ShowData: React.FC = () => {
         try {
         //   const docRef = await firestore.collection('data').add(formData);
         //   console.log('Document written with ID: ', docRef.id);
-          router.push('/');
+          // router.push('/');
         } catch (error) {
           console.error('Error adding document: ', error);
         }
