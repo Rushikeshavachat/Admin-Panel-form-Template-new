@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { firestore } from '../libs/firebase';
+// import { firestore } from '../libs/firebase';
 
 const CreatePage: React.FC = () => {
   const [formData, setFormData] = useState({

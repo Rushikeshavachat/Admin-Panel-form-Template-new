@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { firebaseConfig } from '../../libs/firebase';
+// import { firebaseConfig } from '../../libs/firebase';
 
 const EditPage: React.FC = () => {
   const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { firestore } from '../../libs/firebase';
+// import { firestore } from '../../libs/firebase';
 
 const DeletePage: React.FC = () => {
   const router = useRouter();

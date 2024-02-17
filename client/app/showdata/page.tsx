@@ -1,7 +1,7 @@
 // pages/index.tsx
 "use client"
 import { useEffect, useState } from 'react';
-import { firestore } from '../../libs/firebase';
+// import { firestore } from '../../libs/firebase';
 import { useRouter } from 'next/navigation';
 
 const ShowData: React.FC = () => {
