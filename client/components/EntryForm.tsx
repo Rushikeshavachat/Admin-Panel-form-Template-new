@@ -11,7 +11,7 @@ const EntryForm: React.FC<EntryFormProps> = ({ initialData, onSubmit }) => {
   const [formData, setFormData] = useState(initialData || {});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    // setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

@@ -23,8 +23,8 @@ const CreatePage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const docRef = await firestore.collection('data').add(formData);
-      console.log('Document written with ID: ', docRef.id);
+      // const docRef = await firestore.collection('data').add(formData);
+      // console.log('Document written with ID: ', docRef.id);
       router.push(`/showdata`);
     } catch (error) {
       console.error('Error adding document: ', error);
