@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { firestore } from '../libs/firebase';
+// import { firestore } from '../libs/firebase';
 
 interface DataItem {
   id: string;
@@ -15,30 +15,30 @@ const FormPage: React.FC = () => {
   const [data, setData] = useState<DataItem[]>([]);
   const router = useRouter();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const snapshot = await firestore.collection('data').get();
-        const items: DataItem[] = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setData(items);
-      } catch (error) {
-        console.error('Error fetching data: ', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const snapshot = await firestore.collection('data').get();
+  //       const items: DataItem[] = snapshot.docs.map(doc => ({
+  //         id: doc.id,
+  //         ...doc.data()
+  //       }));
+  //       setData(items);
+  //     } catch (error) {
+  //       console.error('Error fetching data: ', error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 router.push("/login")
   const handleDelete = async (id: string) => {
-    try {
-      await firestore.collection('data').doc(id).delete();
-      setData(data.filter(item => item.id !== id));
-    } catch (error) {
-      console.error('Error deleting document: ', error);
-    }
+    // try {
+    //   await firestore.collection('data').doc(id).delete();
+    //   setData(data.filter(item => item.id !== id));
+    // } catch (error) {
+    //   console.error('Error deleting document: ', error);
+    // }
   };
 
   const handleEdit = (id: string) => {

@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    // domains:[
+    //  [ url: " "]
+    // ]
+};
 
 export default nextConfig;
