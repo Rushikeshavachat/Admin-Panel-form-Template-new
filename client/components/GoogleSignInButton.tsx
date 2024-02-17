@@ -1,10 +1,10 @@
 import React from 'react';
-import firebase from '../firebaseConfig';
+// import firebase from '../firebaseConfig';
 
 const GoogleSignInButton: React.FC = () => {
   const signInWithGoogle = async () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    await firebase.auth().signInWithPopup(provider);
+    // const provider = new firebase.auth.GoogleAuthProvider();
+    // await firebase.auth().signInWithPopup(provider);
   };
 
   return (

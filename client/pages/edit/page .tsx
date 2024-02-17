@@ -15,14 +15,14 @@ const EditPage: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const docRef = firestore.collection('data').doc(id as string);
-        const doc = await docRef.get();
-        if (doc.exists) {
-          const data = doc.data();
-          setFormData(data);
-        } else {
-          console.log('No such document!');
-        }
+        // const docRef = firestore.collection('data').doc(id as string);
+        // const doc = await docRef.get();
+      //   if (doc.exists) {
+      //     const data = doc.data();
+      //     setFormData(data);
+      //   } else {
+      //     console.log('No such document!');
+      //   }
       } catch (error) {
         console.error('Error fetching document: ', error);
       }
@@ -45,7 +45,7 @@ const EditPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await firestore.collection('data').doc(id as string).update(formData);
+      // await firestore.collection('data').doc(id as string).update(formData);
      
     } catch (error) {
       console.error('Error updating document: ', error);

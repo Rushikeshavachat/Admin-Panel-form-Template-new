@@ -9,7 +9,7 @@ const DeletePage: React.FC = () => {
   useEffect(() => {
     const deleteData = async () => {
       try {
-        await firestore.collection('data').doc(id as string).delete();
+        // await firestore.collection('data').doc(id as string).delete();
    
       } catch (error) {
         console.error('Error deleting document: ', error);
