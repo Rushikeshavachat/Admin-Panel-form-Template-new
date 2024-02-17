@@ -1,40 +1,40 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { auth, firestore } from '../firebaseconfig';
+// import { auth, firestore } from '../firebaseconfig';
 
 const DashboardPage: React.FC = () => {
   const router = useRouter();
   const [adminData, setAdminData] = useState<any[]>([]);
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (!user) {
-        router.push('/login');
-      }
-    });
-    return () => unsubscribe();
-  }, []);
+  // useEffect(() => {
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     if (!user) {
+  //       router.push('/login');
+  //     }
+  //   });
+  //   return () => unsubscribe();
+  // }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data: any[] = [];
-      const snapshot = await firestore.collection('admins').get();
-      snapshot.forEach((doc) => {
-        data.push({ id: doc.id, ...doc.data() });
-      });
-      setAdminData(data);
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data: any[] = [];
+  //     const snapshot = await firestore.collection('admins').get();
+  //     snapshot.forEach((doc) => {
+  //       data.push({ id: doc.id, ...doc.data() });
+  //     });
+  //     setAdminData(data);
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const handleUpdate = (id: string) => {
     // Implement update logic
   };
 
   const handleDelete = async (id: string) => {
-    await firestore.collection('admins').doc(id).delete();
+    // await firestore.collection('admins').doc(id).delete();
     const updatedData = adminData.filter((admin) => admin.id !== id);
     setAdminData(updatedData);
   };
