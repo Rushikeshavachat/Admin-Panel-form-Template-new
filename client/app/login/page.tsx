@@ -1,9 +1,9 @@
 "use client"
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const Login: React.FC = () => {
-    const router=useRouter()
+    // const router=useRouter()
   const [formData, setFormData] = useState({
     id: '',
     name: '',
@@ -23,7 +23,7 @@ const Login: React.FC = () => {
     e.preventDefault();
     console.log(formData); // You can perform any further actions with the form data here
   };
-  router.push("/delete/id")
+  // router.push("/delete/id")
   return (
 <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8">
       <div className="mb-4">
