@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var react_1 = require("react");
-var firebaseconfig_1 = require("../firebaseconfig");
+// var firebaseconfig_1 = require("../firebaseconfig");
 var UserDataForm = function () {
     var _a = react_1.useState(''), name = _a[0], setName = _a[1];
     var _b = react_1.useState(''), id = _b[0], setId = _b[1];
@@ -48,14 +48,14 @@ var UserDataForm = function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    currentUser = firebaseconfig_1.firebase.auth().currentUser;
-                    if (!currentUser) return [3 /*break*/, 2];
-                    return [4 /*yield*/, firebaseconfig_1.firebase.firestore().collection('users').doc(currentUser.uid).set({
-                            name: name,
-                            id: id,
-                            contact: contact,
-                            address: address
-                        })];
+                    // currentUser = firebaseconfig_1.firebase.auth().currentUser;
+                    // if (!currentUser) return [3 /*break*/, 2];
+                    // return [4 /*yield*/, firebaseconfig_1.firebase.firestore().collection('users').doc(currentUser.uid).set({
+                    //         name: name,
+                    //         id: id,
+                    //         contact: contact,
+                    //         address: address
+                    //     })];
                 case 1:
                     _a.sent();
                     _a.label = 2;

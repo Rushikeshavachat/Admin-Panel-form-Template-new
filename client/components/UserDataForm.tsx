@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import firebase from '../firebaseConfig';
+// import firebase from '../firebaseConfig';
 
 const UserDataForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -8,15 +8,15 @@ const UserDataForm: React.FC = () => {
   const [address, setAddress] = useState('');
 
   const saveUserData = async () => {
-    const currentUser = firebase.auth().currentUser;
-    if (currentUser) {
-      await firebase.firestore().collection('users').doc(currentUser.uid).set({
-        name,
-        id,
-        contact,
-        address,
-      });
-    }
+    // const currentUser = firebase.auth().currentUser;
+    // if (currentUser) {
+    //   await firebase.firestore().collection('users').doc(currentUser.uid).set({
+    //     name,
+    //     id,
+    //     contact,
+    //     address,
+    //   });
+    // }
   };
 
   return (
